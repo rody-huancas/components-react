@@ -1,10 +1,10 @@
 import { twMerge } from "tailwind-merge";
 
 interface BadgeProps {
-  label: React.ReactNode;
-  type?: "success" | "warning" | "error" | "info" | "neutral";
+  label     : React.ReactNode;
+  type?     : "success" | "warning" | "error" | "info" | "neutral";
   className?: string;
-  border?: boolean;
+  border?   : boolean;
 }
 
 const getBadgeColor = (type: BadgeProps["type"], border: BadgeProps["border"]) => {

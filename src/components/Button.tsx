@@ -4,19 +4,19 @@ import { twMerge } from 'tailwind-merge';
 import { ArrowPathIcon } from '@heroicons/react/24/outline';
 
 interface ButtonProps {
-  children: React.ReactNode;
-  variant?: 'primary' | 'secondary' | 'danger';
-  style?: 'fill' | 'outline' | 'link';
-  type?: 'button' | 'submit' | 'reset';
-  size?: 'small' | 'medium' | 'large';
-  disabled?: boolean;
-  as?: React.ElementType;
-  loading?: boolean;
+  children  : React.ReactNode;
+  variant?  : 'primary' | 'secondary' | 'danger';
+  style?    : 'fill' | 'outline' | 'link';
+  type?     : 'button' | 'submit' | 'reset';
+  size?     : 'small' | 'medium' | 'large';
+  disabled? : boolean;
+  as?       : React.ElementType;
+  loading?  : boolean;
   className?: string;
-  onClick?: () => void;
-  href?: string;
-  target?: string;
-  rel?: string;
+  onClick?  : () => void;
+  href?     : string;
+  target?   : string;
+  rel?      : string;
 }
 
 const Styles = {
@@ -38,18 +38,18 @@ const Styles = {
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'primary',
-  style = 'fill',
-  type = 'button',
-  disabled = false,
-  as = 'button',
-  loading = false,
+  variant   = 'primary',
+  style     = 'fill',
+  type      = 'button',
+  disabled  = false,
+  as        = 'button',
+  loading   = false,
   className = '',
   onClick,
   href,
   target,
   rel,
-  size = 'medium',
+  size      = 'medium',
 }) => {
   const getSizeStyles = () => {
     switch (size) {
