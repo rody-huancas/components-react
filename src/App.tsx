@@ -1,5 +1,6 @@
 import { Badge } from "./components/Badge";
 import { Button } from "./components/Button";
+import { Checkbox } from "./components/Checkbox";
 
 const App = () => {
   return (
@@ -9,6 +10,8 @@ const App = () => {
       </Button>
 
       <Badge label="Active" type="success" />
+
+      <Checkbox label="Check Me" />
     </div>
   );
 };
