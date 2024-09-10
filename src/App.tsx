@@ -1,6 +1,7 @@
 import { Badge } from './components/Badge'
 import { Button } from './components/Button'
 import { Checkbox } from './components/Checkbox'
+import { SelectInput } from './components/SelectInput'
 import { Textarea } from './components/Textarea'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
       
       <div className='flex gap-5'>
         <Textarea label="Message" />
+        <SelectInput options={[{key: "1", value: "Option 1"}, {key: "2", value: "Option 2"}]} />
       </div>
     </div>
   )
