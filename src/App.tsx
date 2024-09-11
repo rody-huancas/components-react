@@ -2,6 +2,7 @@ import { Badge } from './components/Badge'
 import { Button } from './components/Button'
 import { Checkbox } from './components/Checkbox'
 import { ContextualHelp } from './components/ContextualHelp'
+import { Notice } from './components/Notice'
 import { SelectInput } from './components/SelectInput'
 import { Textarea } from './components/Textarea'
 
@@ -16,6 +17,8 @@ const App = () => {
         <Badge label="Active" type="success" />
 
         <Checkbox label="Check Me" />
+
+        <Notice label="Notice">Message success</Notice>
       </div>
 
       <div className="flex gap-5">
@@ -33,6 +36,7 @@ const App = () => {
             customer support team for help.
           </p>
         </ContextualHelp>
+
       </div>
     </div>
   )
