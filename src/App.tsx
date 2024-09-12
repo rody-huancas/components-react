@@ -7,9 +7,29 @@ import { ConfirmModal } from './components/modal/ConfirmModal'
 import { Notice } from './components/Notice'
 import { SelectInput } from './components/SelectInput'
 import { Textarea } from './components/Textarea'
+import { Table, TableBody, TableHeader } from './components/Table'
+
+const users = [
+  { id: 1, name: 'John Doe', email: 'john@example.com' },
+  { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
+  { id: 3, name: 'Sam Wilson', email: 'sam@example.com' },
+]
 
 const App = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const renderRow = (
+    user: { id: number; name: string; email: string },
+  ) => (
+    <tr key={user.id}>
+      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-gray-300">
+        {user.name}
+      </td>
+      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-400">
+        {user.email}
+      </td>
+    </tr>
+  )
 
   return (
     <div className="relative flex flex-col items-center justify-center gap-5 h-screen">
@@ -46,6 +66,19 @@ const App = () => {
         <button onClick={() => setIsOpen(true)}>Open Modal</button>
       </div>
 
+      <div>
+        <Table className="shadow-sm border border-gray-300 dark:border-gray-700">
+          <TableHeader>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+              Name
+            </th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider">
+              Email
+            </th>
+          </TableHeader>
+          <TableBody items={users} renderRow={renderRow} />
+        </Table>
+      </div>
       <ConfirmModal
         title="Modal"
         message="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius cumque rerum nulla reiciendis possimus facere explicabo doloremque expedita, id, animi consectetur, consequuntur voluptatibus delectus itaque! Repellat odit unde quae facilis."
