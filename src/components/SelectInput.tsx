@@ -2,21 +2,21 @@ import React, { useEffect, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 interface Option {
-  key: string
+  key  : string
   value: string
 }
 
 interface SelectProps {
-  label?: string
-  help?: React.ReactNode
-  error?: React.ReactNode
-  required?: boolean
-  options: Option[]
-  selectedKey?: string
-  className?: string
+  label           ?: string
+  help            ?: React.ReactNode
+  error           ?: React.ReactNode
+  required        ?: boolean
+  options          : Option[]
+  selectedKey     ?: string
+  className       ?: string
   wrapperClassName?: string
-  onChange?: (selectedOption: Option) => void
-  props?: React.DetailedHTMLProps<
+  onChange        ?: (selectedOption: Option) => void
+  props           ?: React.DetailedHTMLProps<
     React.SelectHTMLAttributes<HTMLSelectElement>,
     HTMLSelectElement
   >

@@ -1,12 +1,8 @@
 import React, { useState } from 'react'
+
 import { twMerge } from 'tailwind-merge'
-import {
-  ExclamationTriangleIcon,
-  XCircleIcon,
-  CheckCircleIcon,
-  InformationCircleIcon,
-} from '@heroicons/react/20/solid'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import { ExclamationTriangleIcon, XCircleIcon, CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 
 export interface NoticeProps {
   label?: React.ReactNode

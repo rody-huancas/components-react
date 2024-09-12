@@ -2,19 +2,19 @@ import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
 export interface TableProps {
-  children: React.ReactNode
+  children  : React.ReactNode
   className?: string
 }
 
 export interface TableHeaderProps {
-  children: React.ReactNode
+  children  : React.ReactNode
   className?: string
 }
 
 export interface TableBodyProps<T> {
   className?: string
-  items: T[]
-  renderRow: (item: T, index: number) => React.ReactNode
+  items     : T[]
+  renderRow : (item: T, index: number) => React.ReactNode
 }
 
 export const Table = ({ className, children }: TableProps) => {

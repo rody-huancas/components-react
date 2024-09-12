@@ -5,17 +5,17 @@ import classNames from 'classnames';
 import { Dialog, Transition } from '@headlessui/react';
 
 export interface ModalProps {
-  isOpen: boolean;
-  onClose(): void;
-  maxWidth?: string;
+  isOpen    : boolean;
+  onClose() : void;
+  maxWidth ?: string;
 }
 
 const Modal = ({ isOpen, onClose, maxWidth = 'lg', children }: PropsWithChildren<ModalProps>) => {
   const maxWidthClass = {
-    sm: 'sm:max-w-sm',
-    md: 'sm:max-w-md',
-    lg: 'sm:max-w-lg',
-    xl: 'sm:max-w-xl',
+    sm   : 'sm:max-w-sm',
+    md   : 'sm:max-w-md',
+    lg   : 'sm:max-w-lg',
+    xl   : 'sm:max-w-xl',
     '2xl': 'sm:max-w-2xl',
   }[maxWidth];
 
