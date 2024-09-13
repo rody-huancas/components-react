@@ -9,6 +9,7 @@ import { SelectInput } from './components/SelectInput'
 import { ConfirmModal } from './components/modal/ConfirmModal'
 import { ContextualHelp } from './components/ContextualHelp'
 import { Table, TableBody, TableHeader } from './components/Table'
+import { RadioGroup } from './components/RadioGroup'
 
 const users = [
   { id: 1, name: 'John Doe', email: 'john@example.com' },
@@ -65,6 +66,12 @@ const App = () => {
 
       <div>
         <button onClick={() => setIsOpen(true)}>Open Modal</button>
+
+        <RadioGroup 
+          options={[{ key: "1", value: "One" }, { key: "2", value: "Two" }]}
+          onChange={() => {}}
+          value='Option'
+        />
       </div>
 
       <div>
@@ -80,6 +87,7 @@ const App = () => {
           <TableBody items={users} renderRow={renderRow} />
         </Table>
       </div>
+
       <ConfirmModal
         title="Modal"
         message="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius cumque rerum nulla reiciendis possimus facere explicabo doloremque expedita, id, animi consectetur, consequuntur voluptatibus delectus itaque! Repellat odit unde quae facilis."
