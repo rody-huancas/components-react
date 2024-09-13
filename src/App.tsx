@@ -10,11 +10,21 @@ import { ConfirmModal } from './components/modal/ConfirmModal'
 import { ContextualHelp } from './components/ContextualHelp'
 import { Table, TableBody, TableHeader } from './components/Table'
 import { RadioGroup } from './components/RadioGroup'
+import { SelectCard } from './SelectCard'
+
+import { BookOpenIcon } from '@heroicons/react/24/solid'
+import { CodeBracketIcon, TvIcon } from '@heroicons/react/24/outline'
 
 const users = [
   { id: 1, name: 'John Doe', email: 'john@example.com' },
   { id: 2, name: 'Jane Smith', email: 'jane@example.com' },
   { id: 3, name: 'Sam Wilson', email: 'sam@example.com' },
+]
+
+const optionsCard = [
+  { key: 'option1', name: 'Opción 1', icon: <BookOpenIcon className="h-6 w-6" /> },
+  { key: 'option2', name: 'Opción 2', icon: <CodeBracketIcon className="h-6 w-6" /> },
+  { key: 'option3', name: 'Opción 3', icon: <TvIcon className="h-6 w-6" />, disabled: true },
 ]
 
 const App = () => {
@@ -71,6 +81,20 @@ const App = () => {
           options={[{ key: "1", value: "One" }, { key: "2", value: "Two" }]}
           onChange={() => {}}
           value='Option'
+        />
+
+        <SelectCard
+          label="Selecciona una opción"
+          help="Elige una de las siguientes opciones disponibles"
+          options={optionsCard}
+          selectedKey="option1"
+          onChange={() => {}}
+          renderItem={(option) => (
+            <div className="flex items-center">
+              {option.icon}
+              <span className="ml-2">{option.name}</span>
+            </div>
+          )}
         />
       </div>
 
