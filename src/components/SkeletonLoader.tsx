@@ -1,17 +1,16 @@
-import React from "react";
 import classNames from "classnames";
 
 interface SkeletonLoaderProps {
-  width?: string;
-  height?: string;
-  circle?: boolean;
+  width?    : string;
+  height?   : string;
+  circle?   : boolean;
   className?: string;
 }
 
 const SkeletonLoader: React.FC<SkeletonLoaderProps> = ({
-  width = "100%",
-  height = "20px",
-  circle = false,
+  width     = "100%",
+  height    = "20px",
+  circle    = false,
   className = "",
 }) => {
   return (

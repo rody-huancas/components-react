@@ -1,8 +1,8 @@
 import React from "react";
 
 interface LabelProps extends React.LabelHTMLAttributes<HTMLLabelElement> {
-  text: string;
-  htmlFor?: string;
+  text      : string;
+  htmlFor?  : string;
   className?: string;
 }
 

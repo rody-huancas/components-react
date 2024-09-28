@@ -7,12 +7,7 @@ type MenuItemProps = {
   isActive? : boolean;
 };
 
-const MenuItem: React.FC<MenuItemProps> = ({
-  label,
-  url,
-  className,
-  isActive = false,
-}) => {
+const MenuItem: React.FC<MenuItemProps> = ({ label, url, className, isActive = false }) => {
   return (
     <li>
       <a

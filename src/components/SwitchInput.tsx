@@ -1,27 +1,19 @@
 import { useState, useEffect, ReactNode } from 'react';
 import { Switch } from '@headlessui/react';
-import classNames from 'classnames';
 import { twMerge } from 'tailwind-merge';
+import classNames from 'classnames';
 
 type Props = {
-  label: string;
+  label        : string;
   initialValue?: boolean;
-  help?: ReactNode;
-  disabled?: boolean;
-  html?: boolean;
-  className?: string;
-  onChange?: (status: boolean) => void;
+  help?        : ReactNode;
+  disabled?    : boolean;
+  html?        : boolean;
+  className?   : string;
+  onChange?    : (status: boolean) => void;
 };
 
-const SwitchInput = ({
-  initialValue = false,
-  label,
-  help,
-  disabled = false,
-  html = false,
-  className,
-  onChange,
-}: Props) => {
+const SwitchInput = ({ initialValue = false, label, help, disabled = false, html = false, className, onChange }: Props) => {
   const [enabled, setState] = useState(initialValue);
 
   useEffect(() => {

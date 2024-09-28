@@ -4,14 +4,14 @@ import classNames from 'classnames';
 import React from 'react';
 
 type DropdownItem = {
-  label: string;
+  label  : string;
   onClick: () => void;
 };
 
 type DropdownProps = {
-  items: DropdownItem[];
+  items      : DropdownItem[];
   buttonLabel: string;
-  className?: string;
+  className? : string;
 };
 
 export const Dropdown: React.FC<DropdownProps> = ({ items, buttonLabel, className }) => {

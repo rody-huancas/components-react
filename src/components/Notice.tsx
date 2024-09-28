@@ -5,10 +5,10 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { ExclamationTriangleIcon, XCircleIcon, CheckCircleIcon, InformationCircleIcon } from '@heroicons/react/20/solid'
 
 export interface NoticeProps {
-  label?: React.ReactNode
-  type?: 'success' | 'warning' | 'error' | 'info'
-  className?: string
-  children?: React.ReactNode
+  label?      : React.ReactNode
+  type?       : 'success' | 'warning' | 'error' | 'info'
+  className?  : string
+  children?   : React.ReactNode
   dismissible?: boolean
 }
 

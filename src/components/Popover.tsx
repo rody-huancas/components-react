@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 interface PopoverProps {
-  trigger: React.ReactNode;
-  content: React.ReactNode;
+  trigger   : React.ReactNode;
+  content   : React.ReactNode;
   className?: string;
 }
 

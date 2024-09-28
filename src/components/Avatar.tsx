@@ -6,8 +6,7 @@ interface AvatarProps {
 }
 
 const Avatar: React.FC<AvatarProps> = ({ src, alt = 'Avatar', size = 'medium', className }) => {
-  const sizeClass =
-    size === 'small' ? 'w-8 h-8' : size === 'large' ? 'w-16 h-16' : 'w-12 h-12'
+  const sizeClass = size === 'small' ? 'w-8 h-8' : size === 'large' ? 'w-16 h-16' : 'w-12 h-12'
 
   return (
     <div className={`inline-block ${className}`}>
